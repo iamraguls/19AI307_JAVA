@@ -14,9 +14,10 @@ To demonstrate the concept of method overriding in Java by creating an `Animal` 
 
 ### 4C_ANIMAL_DOG_CLASS.JAVA:
 ```
+/*
 Developed by: Ragul S
 RegisterNumber: 212222060184
-
+*/
 ```
 ```java
 class Animal {
