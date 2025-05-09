@@ -1,43 +1,49 @@
-# Ex.No:2(A)  STATIC METHOD
+# Ex.No:2(A) CUBE OF A NUMBER USING STATIC METHOD
 
 ## AIM:
-To create a java program for calculate cube of a number using static method.
+To write a Java program to calculate the cube of a number using a static method.
 
 ## ALGORITHM :
-1.  Start : Begin the process of calculating the cube of a number.
-2.	Declare a variable to store input : Declare an integer variable n to hold the number whose cube will be calculated.
-3.	Create a Scanner object : Create a Scanner object (sc) to read the input from the user.
-4.	Read input from the user : Prompt the user to input an integer value. The input value is stored in the variable n.
-5.	Call the cubecal function : Call the function cubecal(n) which computes the cube of the number by performing n * n * n.
-6.	Store the result : Store the result of the cubecal function in an integer variable result.
-7.	Output the result :
-8.	Print the cube of the number using System.out.println("Cube is: " + result);.
-9.	End the program.
-
-
-
+1. Start the program.
+2. Import the `Scanner` class to read input from the user.
+3. Define a static method `cube()` that takes an integer as input and calculates its cube.
+4. In the `main` method, create a `Scanner` object to take the input number.
+5. Call the `cube()` method to compute the cube of the entered number.
+6. Display the result.
+7. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a Static method using Java
-Developed by: 
-RegisterNumber:  
+Program to calculate the cube of a number using a static method in Java
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 2A_CUBE_OF_A_NUMBER_STATIC_METHOD.JAVA:
+```java
+import java.util.*;
 
+public class main {
+    public static void cube(int n){
+        int cube = (int) Math.pow(n, 3);
+        System.out.print("Cube is: " + cube);
+    }
 
-
-
-
-
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        cube(n);
+    }
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/fafbef88-d4ff-4be3-b3a8-7f50f7f07a34)
+
 
 
 
 ## RESULT:
-Thus the java program for calculate cube of a number using static method has been executed successfully.
-
+Thus, the Java program to calculate the cube of a number using a static method was implemented and executed successfully.

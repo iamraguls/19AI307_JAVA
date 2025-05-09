@@ -1,49 +1,48 @@
-# Ex.No:2(B) ACCESS MODIFIERS
+# Ex.No:2(B) DEMONSTRATING THE DEFAULT ACCESS MODIFIER IN JAVA
 
 ## AIM:
-To develop a Java Program to display the addition number using private modifiers only.
+To demonstrate the use of the default access modifier in Java and print the word "default".
 
 ## ALGORITHM :
-1.	Start the program.
-2.	Define a class named `addition`
-3.	Declare two private integer variables, `num1` and `num2`
-4.	Define a private method `add()` that:
-a)	Returns the sum of `num1` and `num2`
-5.	Define a public method `display(int n1, int n2)` that:
-a)	Assigns `n1` to `num1` and `n2` to `num2`
-b)	Calls the `add()` method and prints the result using `System.out.println`
-6.	Define the `main` method as static
-a)	Create an instance of the `addition` class called `ad`
-b)	Call the `display(8, 9)` method on the `ad` object
-7.	End
-
-
-
-
-
+1. Start the program.
+2. Define a class named `BaseClass` with a method `display()` having default access modifier.
+3. The `display()` method will print the word "default".
+4. Define a class named `Main` with the `main` method.
+5. In the `main` method, create an object of the `BaseClass`.
+6. Call the `display()` method using the object.
+7. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a access modifiers using Java
-Developed by: 
-RegisterNumber:  
+Program to demonstrate the default access modifier in Java
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 2B_DEFAULT_ACCESS_MODIFIER.JAVA:
+```java
+class BaseClass {
+    void display() {
+        System.out.println("default");
+    }
+}
 
-
-
-
-
-
+public class Main {
+    public static void main(String[] args) {
+        BaseClass obj = new BaseClass();
+        
+        obj.display(); 
+    }
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/8993a4a3-a0b6-4570-bc92-8095fcb84a53)
+
 
 
 
 ## RESULT:
-Thus the java program to display the addition number using private modifiers only was executed successfully.
-
-
+Thus, the Java program to demonstrate the default access modifier and print the word "default" was implemented and executed successfully.
