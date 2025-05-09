@@ -1,51 +1,61 @@
-# Ex.No:6(C)             HIERARCHICAL INHERITANCE 
+# Ex.No:6(C) PROGRAM TO DEMONSTRATE CONSTRUCTORS IN INHERITANCE
 
 ## AIM:
-  To Develop a Java program to perform Hierarchical Inheritance for below scenario Parent have method " display" to display "This is Parent Class". Child1 have method "print" to display "This is Child1 Class" Child1 have method "print" to display "Child2 Class". In Main create object for both child1 and child2 and access its member function.
-
+To create a program demonstrating the use of constructors in inheritance. The program will:
+1. Display a message in the parent class constructor.
+2. Call the parent class constructor from child class constructors.
+3. Display the message for each derived class.
 
 ## ALGORITHM :
-1.  Start the Program
-2.	Define class `Parent`:
--	a) Method `show()` to print "This is Parent Class"
-3.	Define class `Child1` that extends `Parent`:
--	a) Method `print()` to print "This is Child1 Class"
-4.	Define class `Child2` that extends `Parent`:
--	a) Method `display()` to print "This is Child2 Class"
-5.	In `Main` class `main` method:
--	a) Create `Child1` object `child` and call `show()` and `print()` on it
--	b) Create `Child2` object `chi` and call `show()` and `display()` on it
-6.	End
-
-
-
+1. Define the `Animal` class with a constructor that displays "Animal is the Base Class".
+2. Define the `Dog` class which extends `Animal` and in its constructor, call the parent constructor using `super()`, then display "Dog is the Derived Class of Animal".
+3. Define the `Cat` class which extends `Animal` and in its constructor, call the parent constructor using `super()`, then display "Cat is the Derived Class of Animal".
+4. In the `Main` class, create objects of `Dog` and `Cat` to see the constructor behavior.
+5. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a Hierarchical Inheritance using Java
-Developed by: 
-RegisterNumber:  
+Program to demonstrate constructors in inheritance in Java.
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 6C_INHERITANCE_CONSTRUCTORS.JAVA:
+```java
+class Animal {
+    Animal() {
+        System.out.println("Animal is the Base Class");
+    }
+}
 
+class Dog extends Animal {
+    Dog() {
+        super();
+        System.out.println("Dog is the Derived Class of Animal");
+    }
+}
 
+class Cat extends Animal {
+    Cat() {
+        super();
+        System.out.println("Cat is the Derived Class of Animal");
+    }
+}
 
-
-
-
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        
+        Cat cat = new Cat();
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/08dfb95d-f675-4a3c-ae4f-556c97572cf3)
 
 
 ## RESULT:
-Thus the java program for Hierarchical inheritance was executed successfully.
-
-
-
-
-
-
+Thus, the Java program demonstrating constructors in inheritance, with parent class constructor being called from child class constructors, was successfully implemented and executed.

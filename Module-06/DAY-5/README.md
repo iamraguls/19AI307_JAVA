@@ -1,46 +1,54 @@
-# Ex.No:6(E)  MULTIPLE INHERITANCE
+# Ex.No:6(E) PROGRAM TO DEMONSTRATE METHOD OVERRIDING
 
 ## AIM:
-To write a Java program using multiple inheritance through interfaces to read student details and marks, calculate the average, and display the mark sheet.
+To create a program demonstrating method overriding, where the child class overrides the method of the parent class, and both the overridden and overriding methods are invoked using an object of the child class.
 
 ## ALGORITHM :
-
-1.	Start the program.
-2.	Create interface Student:
-a.	Declare methods to read name and rollno.
-3.	Create interface Studentdet:
-a.	Declare a method to read marks of 6 subjects and calculate the average.
-b.	Create a class Studentdetails that implements both interfaces:
-c.	Define variables for name, roll number, marks array, and average.
-4.	Implement all methods from the interfaces.
-a.	Create a display() method to show student details and average.
-5.	In main() method:
-a.	Create an object of Studentdetails.
-b.	Call the methods to get input and display results.
-6.	End the program.
-
+1. Define a `Parent` class with a method `display()` that prints "Parent Class".
+2. Define a `Child` class that extends the `Parent` class and overrides the `display()` method to print "Child Class".
+3. Add a `print()` method in the `Child` class that calls both the overridden `display()` method (using `display()`) and the parent class method (using `super.display()`).
+4. In the `Main` class, create an instance of the `Child` class and call the `print()` method using the object.
+5. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a Multiple Inheritance
-Developed by: 
-RegisterNumber:  
+Program to demonstrate method overriding in Java.
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 6E_METHOD_OVERRIDING.JAVA:
+```java
+class Parent {
+    void display() {
+        System.out.println("Parent Class");
+    }
+}
 
+class Child extends Parent {
+    void display() {
+        System.out.println("Child Class");
+    }
 
+    void print() {
+        display();
+        super.display();
+    }
+}
 
-
-
-
+public class Main {
+    public static void main(String[] args) {
+        Child obj = new Child();
+        obj.print();
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/23f26de5-4880-489b-bb9d-b5179e383e3d)
 
 
 ## RESULT:
-
-Thus, the java program demonstrates multiple inheritance using interfaces and successfully displays the mark sheet of a student by collecting personal and academic data. 
+Thus, the Java program demonstrating method overriding, where the child class overrides the `display()` method of the parent class, and both methods are invoked using the `print()` method, was successfully implemented and executed.

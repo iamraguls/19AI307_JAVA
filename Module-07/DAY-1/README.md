@@ -1,46 +1,51 @@
-# Ex.No:7(A)           EXCEPTION HANDLING-RUN TIME EXCEPTION
+# Ex.No:7(A) PROGRAM TO HANDLE DIVISION BY ZERO EXCEPTION
+
 ## AIM:
-  To Develop a Java Program for handling Arithmetic Exception (division by zero exception) using Exception Handling Mechanism.
+To write a Java program to handle `ArithmeticException` for division by zero using try-catch block.
 
-## ALGORITHM :
-1.  Start the Program
-2.	Import `java.util.*` for input handling
-3.	Define class `Example1`:
--	a) In `main` method, create `Scanner` object `sc` for input
-4.	Use `try` block to:
--	a) Read integers `a` and `b` from user input
--	b) Calculate `res = a / b` and print "Result: " followed by `res`
-5.	Use `catch` block to handle `ArithmeticException`:
--	a) If division by zero occurs, print "You Shouldn't divide a number by zero"
-6.	End
-
-
-
-
-
-
+## ALGORITHM:
+1. Start the program.
+2. Import `Scanner` class.
+3. Create a scanner object to take user input.
+4. Read two integers `num1` and `num2`.
+5. Use try block to perform division.
+6. Catch `ArithmeticException` to handle divide by zero error.
+7. Print appropriate message based on whether exception occurred or not.
+8. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a Exception Handling-Run Time Exception using Java
-Developed by: 
-RegisterNumber:  
+Program to handle division by zero exception.
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 6D_DIVISION_EXCEPTION.JAVA:
+```java
+import java.util.Scanner;
 
+public class DivisionByZeroException {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
 
-
-
-
+        try {
+            int result = num1 / num2;
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("You Shouldn't divide a number by zero");
+        }
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/0cdf6128-ffa2-4a8d-bf0c-034c992bcf8c)
 
 
 ## RESULT:
-Thus the Java Program for handling Arithmetic Exception (division by zero exception) using Exception Handling Mechanism was executed successfully.
-
+Thus, the Java program to handle division by zero exception using try-catch block was successfully implemented and verified.

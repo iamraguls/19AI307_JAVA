@@ -1,47 +1,50 @@
-# Ex.No:5(A)  DATA HIDING AND ENCAPSULATION
+# Ex.No:5(A) APPLY ENCAPSULATION CONCEPTS WITH SETTER AND GETTER METHODS
+
 ## AIM:
-To Create a java program to display name and location of the employee and use the encapsulation concepts
+To apply the concept of encapsulation in Java using a class with a private field and its corresponding setter and getter methods.
 
-## ALGORITHM :
-1.  Start the program
-2.	Define class `Employee`:
--	a) Declare two private `String` variables: `name1` and `name2`
--	b) Define `setname(String n1)` method to set `name1` to `n1`
--	c) Define `setname2(String n2)` method to set `name2` to `n2`
--	d) Define `get1()` method to return `name1`
--	e) Define `get2()` method to return `name2`
-3.	Define `Main` class with `main` method:
--	a) Create `Scanner` object `sc` for input
--	b) Read `name1` and `name2` from user input
--	c) Create ` Employee ` object `hl`
--	d) Use `hl.setname(name1)` and `hl.setname2(name2)` to set the names
--	e) Print the values of `hl.get1()` and `hl.get2()`
-4.	End
-
-
-
-
+## ALGORITHM:
+1. Create a class with a private field `name`.
+2. Create public methods `getName()` and `setName(String name)` to access and modify the field.
+3. Read input from user and set it using the setter method.
+4. Display the field using the getter method.
 
 ## PROGRAM:
- ```
+
+### 5A_ENCAPSULATION.JAVA:
+
 /*
-Program to implement a Data Hiding & Encapsulation using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
+
+```java
+import java.util.*;
+
+public class College {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String inp = sc.nextLine();
+        College new_name = new College();
+        new_name.setName(inp);
+        System.out.println(new_name.getName());
+    }
+}
 ```
 
-## Sourcecode.java:
-
-
-
-
-
-
-
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/3f48f277-f760-4e53-b29c-5ccd177e3525)
 
 
 ## RESULT:
-Thus , the  java program to display name and location of the employee and use the encapsulation concepts executed successfully.
+The Java program successfully demonstrates the use of encapsulation with getter and setter methods to display the name of a person.

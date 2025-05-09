@@ -1,46 +1,74 @@
-# Ex.No:5(C)    GETTER AND SETTER METHOD
+# Ex.No:5(C) FACTORIAL USING SETTER AND GETTER
 
 ## AIM:
-To Create a java program to print the sum of two number using getter and setter method.
+To write a Java program that prints the factorial of a given number using setter and getter methods.
 
 ## ALGORITHM :
-1.  Start the Program
-2.	Define class `Employee`:
--	a) Private variables `n1` and `n2`
--	b) Method `setsum(int n1, int n2)` to set values of `n1` and `n2`
--	c) Method `getsum()` to calculate and print `sum = n1 + n2`
-3.	In `main` class `main` method:
--	a) Use `Scanner` to read integers `n1` and `n2`
--	b) Create ` Employee ` object, set values, and call `getsum()`
-4.	End
-
+1. Start the program.
+2. Create a class `FactorialCalculator` with private variables `number` and `factorial`.
+3. Implement setter method `setNumber()` to set the number and calculate factorial.
+4. Implement getter methods `getNumber()` and `getFactorial()` to access number and factorial.
+5. In the `Main` class, read a number from the user.
+6. Use `setNumber()` to set the input and calculate factorial.
+7. Print the result using getter methods.
+8. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a Getter and Setter using Java
-Developed by: 
-RegisterNumber:  
+Program to calculate factorial using setter and getter methods in Java.
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 5C_FACTORIAL_SET_GET.JAVA:
+```java
+import java.util.Scanner;
 
+class FactorialCalculator {
+    private int number;
+    private long factorial;
 
+    public void setNumber(int number) {
+        this.number = number;
+        calculateFactorial();
+    }
 
+    public int getNumber() {
+        return number;
+    }
 
+    public long getFactorial() {
+        return factorial;
+    }
 
+    private void calculateFactorial() {
+        factorial = 1;
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+    }
+}
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        FactorialCalculator fc = new FactorialCalculator();
+
+        int num = scanner.nextInt();
+        fc.setNumber(num);
+
+        System.out.println("Factorial of " + fc.getNumber() + " is: " + fc.getFactorial());
+
+        scanner.close();
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/27ae009e-23e9-4e8c-8298-004265006362)
 
 
 ## RESULT:
-Thus the java program to print the sum of two number using getter and setter method was executed successfully.
-
-
-
-
-
-
+Thus, the Java program to find the factorial of a number using setter and getter methods was successfully implemented and executed.
