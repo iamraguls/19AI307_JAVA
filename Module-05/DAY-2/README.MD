@@ -12,12 +12,12 @@ To demonstrate the use of a tightly encapsulated class in Java that reads string
 ## PROGRAM:
 
 ### 5B_TIGHT_ENCAPSULATION_SUM.JAVA:
-
+```
 /*
 Developed by: Ragul S
 RegisterNumber: 212222060184
 */
-
+```
 ```java
 import java.util.*;
 
