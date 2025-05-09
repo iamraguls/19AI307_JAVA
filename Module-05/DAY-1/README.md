@@ -12,12 +12,12 @@ To apply the concept of encapsulation in Java using a class with a private field
 ## PROGRAM:
 
 ### 5A_ENCAPSULATION.JAVA:
-
+```
 /*
 Developed by: Ragul S
 RegisterNumber: 212222060184
 */
-
+```
 ```java
 import java.util.*;
 
