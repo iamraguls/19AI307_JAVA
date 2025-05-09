@@ -1,44 +1,52 @@
-# Ex.No:1(E)  STATIC VARIABLE
+# Ex.No:1(E) SWAPPING VALUES WITHOUT A THIRD VARIABLE
 
 ## AIM:
-To write a Java program to print student details (name and age), where age is the same for all students. Use a static variable to represent the age and demonstrate its use in accessing a shared value across all class objects
+To write a Java program to swap the values of two variables without using a third variable and print the swapped values.
 
 ## ALGORITHM :
-1.	Start the program.
-2.	Create a class named Student.
-3.	Declare a static variable age in the Student class.
-4.	Declare an instance variable name.
-5.	Create a constructor to initialize the student's name.
-6.	Define a method displayDetails() to print the student's name and age.
-7.	In the main method:
-I.	Assign a value to the static variable age.
-II.	Create multiple Student objects with different names.
-III.	Call the displayDetails() method for each student.
-8.	End the program.
-
-
+1. Start the program.
+2. Import the `Scanner` class to read input from the user.
+3. Read the values of two variables `a` and `b`.
+4. Print the values before swapping.
+5. Use the XOR (`^`) operator to swap the values of `a` and `b` without a third variable.
+6. Print the values after swapping.
+7. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a Static Variable using Java
-Developed by: 
-RegisterNumber:  
+Program to swap the values of two variables without using a third variable
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 1E_SWAP_VALUES_WITHOUT_THIRD_VARIABLE.JAVA:
+```java
+import java.util.*;
 
-
-
-
-
-
+public class main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        System.out.printf("Before swapping: a = %d, b = %d", a, b);
+        System.out.println();
+        
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        
+        System.out.printf("After swapping: a = %d, b = %d", a, b);
+        System.out.println();
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/1aeaefae-c567-41e3-bd08-3d86a8923a5d)
 
 
 ## RESULT:
-Thus, the Java program for the concept of using a static variable for shared data was correctly implemented and verified successfully. 
-
+Thus, the Java program to swap the values of two variables without using a third variable was implemented and executed successfully.
