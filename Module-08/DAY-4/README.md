@@ -1,42 +1,49 @@
-# Ex.No:8(D) BUFFER INPUT/OUTPUT STREAM
+# Ex.No:8(D) SUM OF NATURAL NUMBERS USING BUFFEREDREADER
 
 ## AIM:
- To create a java program file for displaying the data from the file after skip method using FileInputStream & BufferedInputStream.
+To write a Java program to read the number from the user using the `BufferedReader` class and perform the sum of natural numbers.
 
-## ALGORITHM :
-1.	Import java.io.* and java.util.* for file handling and user input.
-2.	Create a file named sample.txt and write "This is a line of text inside the file." using FileWriter.
-3.	Close the FileWriter to save the content to sample.txt.
-4.	Open sample.txt with a FileInputStream wrapped in a BufferedInputStream for efficient reading.
-5.	Prompt the user to enter the number of bytes to skip using Scanner.
-6.	Skip the specified number of bytes in the file and print the remaining content.
-7.	Close the BufferedInputStream and FileInputStream to release system resources.
-
-
-
+## ALGORITHM:
+1. Import necessary classes: `BufferedReader`, `InputStreamReader`, and `IOException`.
+2. Read the input number using `BufferedReader`.
+3. Use a loop to calculate the sum of natural numbers up to the given number.
+4. Display the sum to the user.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a Buffer Input/Output Stream using Java
-Developed by: 
-RegisterNumber:  
+Program to calculate the sum of first n natural numbers using BufferedReader.
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 8D_SUM_OF_NATURAL_NUMBERS.JAVA:
+```java
+import java.io.*;
 
+class Sample {
+    void natural(int num) {
+        int i, sum = 0;  
+        for (i = 1; i <= num; ++i) {  
+            sum = sum + i;  
+        }  
+        System.out.println("Sum of First " + num + " Natural Numbers is = " + sum);  
+    }  
+}
 
-
-
-
-
+public class ReadData {
+    public static void main(String args[]) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int number = Integer.parseInt(reader.readLine());
+        Sample std = new Sample();
+        std.natural(number);
+    }
+}
+```
 
 ## OUTPUT:
-
-
+![image](https://github.com/user-attachments/assets/194126e9-61db-40a7-adf9-3c46e29df241)
 
 ## RESULT:
-Thus, the java program file for displaying the data from the file after skip method using FileInputStream & BufferedInputStream was executed and done successfully.
-
-
+The Java program to read the number from the user using `BufferedReader` class and calculate the sum of natural numbers was successfully executed.

@@ -1,50 +1,58 @@
-# Ex.No:10(C)             JAVA LIST INTERFACE
- ## AIM :
+# Ex.No:10(C) HASHSET CONCEPTS IN COLLECTION
 
-To Create a List interface implemented by arraylist class , adding n elements to object of List interface and display the list is empty or not.
+## AIM:
+To demonstrate the use of HashSet in Java Collection Framework. We will add elements to a HashSet and then display the elements by iterating using a `while` loop. The elements in a HashSet are stored in an unordered manner.
 
-
-## ALGORITHM :
-1.	Start
-2.	Import `java.util.*`
-3.	Define class `Main` with `main` method:
--	a) Initialize `Scanner` and an empty `ArrayList` named `list`
--	b) Read integer `n`
-4.	Check if `list` is empty, print corresponding message
-5.	Use a loop to add `n` strings to `list`
-6.	Check if `list` is empty again, print corresponding message
-7.	End
+## ALGORITHM:
+1. Import `HashSet`, `Scanner`, and `Iterator` from the Java library.
+2. Create a `HashSet` of type `String`.
+3. Read the number of elements to be added to the HashSet.
+4. Use a `for` loop to read and add the elements to the HashSet.
+5. Use an `Iterator` to iterate through the HashSet.
+6. Use a `while` loop to print each element using `Iterator`.
+7. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a JAVA LIST INTERFACE using Java
-Developed by: 
-RegisterNumber:  
+Program to demonstrate HashSet in Collection Framework and iterate using while loop.
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 10C_HASHSET.JAVA:
+```java
+import java.util.*;
 
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
 
+    // Creating a HashSet to store elements
+    HashSet<String> set = new HashSet<>();
+    
+    // Read number of elements
+    int n = sc.nextInt();
+    sc.nextLine();  // Consume the leftover newline
+    
+    // Reading elements from the user
+    for (int i = 0; i < n; i++) {
+      set.add(sc.nextLine());
+    }
 
-
-
-
+    // Iterating and displaying the elements using while loop and Iterator
+    Iterator<String> itr = set.iterator();
+    while (itr.hasNext()) {
+      System.out.println(itr.next());
+    }
+  }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/c8bae57a-e80c-4691-8feb-a183a344bf29)
 
 
 ## RESULT:
-Thus the java program implemented a List interface for array list was executed and verified successfully.
-
-
-
-
-
-
-
-
-
-
+Thus, the Java program using HashSet concepts in collection, adding elements, and iterating through the set using a `while` loop was successfully implemented and executed.

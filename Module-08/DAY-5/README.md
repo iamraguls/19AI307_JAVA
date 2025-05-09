@@ -1,41 +1,41 @@
-# Ex.No:8(E)  INPUT STREAM READER.
+# Ex.No:8(E) READING DATA FROM CONSOLE USING InputStreamReader AND BufferedReader
 
 ## AIM:
-To write a Java program that takes continuous input from the user using InputStreamReader and exits when the input ends with the symbol #. The input is taken inside a do-while loop.
-## ALGORITHM :
-1.	Start the program.
-2.	Import java.io.*.
-3.	Create an InputStreamReader and wrap it in a BufferedReader.
-    	Use a do-while loop to:
-    	Prompt and read input from the user.
-    	Check if the input ends with #.
-4.	If yes, break the loop.
-    	Otherwise, print the input.
-    	Close the input stream.
-5.	End the program
+To write a Java program for reading data from the console using `InputStreamReader` and `BufferedReader`.
 
+## ALGORITHM:
+1. Import necessary classes: `InputStreamReader`, `BufferedReader`, and `IOException`.
+2. Create an `InputStreamReader` object that reads from `System.in` (console input).
+3. Create a `BufferedReader` object that uses the `InputStreamReader` object.
+4. Read the input data using `readLine()` method of `BufferedReader`.
+5. Display the input data with a prefix "Welcome: " to the user.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a INPUT STREAM READER
-Developed by: 
-RegisterNumber:  
+Program to read data from the console using InputStreamReader and BufferedReader.
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 8E_READING_DATA_FROM_CONSOLE.JAVA:
+```java
+import java.io.*;
 
-
-
-
-
-
+public class ConsoleInputExample {
+    public static void main(String[] args) throws IOException {
+        InputStreamReader r = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(r);
+        String name = br.readLine();
+        System.out.println("Welcome: " + name);
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/aa078aec-84f4-49b1-b5b8-adbbf8f6ed73)
 
 
 ## RESULT:
-Thus, the java program uses InputStreamReader to read input and handles loop termination based on the presence of # at the end of the input string, as specified. 
-
+The Java program for reading data from the console using `InputStreamReader` and `BufferedReader` was successfully executed.

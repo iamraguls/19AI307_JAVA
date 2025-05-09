@@ -1,47 +1,54 @@
-# Ex.No:8(C)             FILTER READER
+# Ex.No:8(C) FILE OPERATION - FILTERINPUTSTREAM
+
 ## AIM:
- To create a java Program to read the content from the file by using Filter Reader 
+To write a Java program to get the actual number of available bytes in the file using FilterInputStream.
 
-
-## ALGORITHM :
-1.  Start the Program
-2.  Define CustomFilterReader1, extending FilterReader, and override the read() method to replace spaces with $ while reading.
-2.	In main(), create a FileOutputStream and a FilterOutputStream to write "India is my country" to a file named javaFile123.txt.
-3.	Write the string to the file using filter.write(), then close the FilterOutputStream.
-4.	Create a FileReader to read from javaFile123.txt, and wrap it with CustomFilterReader1.
-5.	Read and print each character, where spaces are replaced with $, until the end of the file.
-6.	Close CustomFilterReader1 and FileReader to free resources
-
+## ALGORITHM:
+1. Import `java.io.*` and `java.util.*`.
+2. Use `FileInputStream` to read from `"sample.txt"`.
+3. Wrap it with `BufferedInputStream` (a subclass of `FilterInputStream`).
+4. Use `available()` to check available bytes.
+5. Use `skip()` to move ahead in the stream.
+6. Again, use `available()` to display remaining bytes.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a Filter Reader using Java
-Developed by: 
-RegisterNumber:  
+Program to find available bytes in a file using FilterInputStream
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 8C_FILTERINPUTSTREAM.JAVA:
+```java
+import java.io.*;
+import java.util.*;
 
+public class Main {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fin = new FileInputStream("sample.txt");
+            FilterInputStream f = new BufferedInputStream(fin);
+            Scanner sc = new Scanner(System.in);
+            int sk = sc.nextInt();
 
+            System.out.println("Available bytes in the file: " + f.available());
+            f.skip(sk);
+            System.out.println("Available bytes in the file: " + f.available());
 
-
-
-
+            fin.close();
+            f.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+        }
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/63882158-5025-4366-8d92-93cdb06432a6)
 
 
 ## RESULT:
-Thus the java Program to read the content from the file by using Filter Reader  was executed and verified successfully.
-
-
-
-
-
-
-
-
-
+Thus, the Java program to get the number of available bytes in a file using FilterInputStream was successfully written and executed.

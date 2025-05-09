@@ -1,41 +1,44 @@
-# Ex.No:10(A)         JAVA COLLECTION FRAMEWORK –ARRAY LIST
-## AIM:
- To Create a Java Program to store n numbers (add elements of type Integer) and then display the n numbers using array List.
+# Ex.No:10(A) CREATE AND DISPLAY ELEMENTS USING ARRAYLIST
 
-## ALGORITHM:
-1.	Start the Program
-2.	Import `java.util.*` for input handling and list functionality
-3.	Define class `Snowdrop` with the `main` method:
--	a) Create `Scanner` object `sc` for input
--	b) Read an integer `n` to specify the number of elements
--	c) Create an `ArrayList` named `num` to store integers
-4.	Use a `for` loop to:
--	a) Read `n` integers from input and add each to `num`
-5.	Use an enhanced `for` loop to:
--	a) Iterate through `num` and print each element
-6.	End
+## AIM:
+To create an ArrayList, read three elements, and display the elements using the `add()` method in Java.
+
+## ALGORITHM :
+1. Import the `ArrayList` and `Scanner` classes from the Java library.
+2. Create an ArrayList of type `String`.
+3. Use a `Scanner` to read three elements from the user.
+4. Add the three elements to the ArrayList using the `add()` method.
+5. Display the ArrayList.
+6. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a ARRAY LIST using Java
-Developed by: 
-RegisterNumber:  
+Program to create an ArrayList, read three elements, and display the elements using the add function in ArrayList.
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 10A_CREATE_ARRAYLIST.JAVA:
+```java
+import java.util.*;
 
-
-
-
-
-
+public class Main {
+    public static void main(String args[]) {
+        ArrayList<String> list = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < 3; i++) {
+            list.add(sc.next());
+        }
+        System.out.println(list);
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/0c9fd7c0-0685-41cf-a94c-f2b0a071f741)
 
 
 ## RESULT:
-TThus the Java Program to store n numbers (add elements of type Integer) and then display the n numbers using array List was executed successfully.
-
+Thus, the Java program to create an ArrayList, read three elements, and display the elements using the `add()` method was implemented and executed successfully.

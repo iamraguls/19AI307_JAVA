@@ -1,36 +1,67 @@
-# Ex.No:9(A)          DATA I/O STREAM
+# Ex.No:9(A) PROGRAM TO DISPLAY NUMBER OF BYTES AND READ INTEGER AND CHARACTER DATA FROM A FILE USING DataInputStream
+
 ## AIM:
-To create a Java Program to store a String Value in a file "testout.txt" using Data Output Stream.
+To write a Java program that displays the number of bytes in a file and reads the integer and character data using `DataInputStream` from the file "OutputFile.txt".
 
 ## ALGORITHM :
-1.  The program creates testout.txt and initializes FileOutputStream and DataOutputStream. It prompts the user to enter a string, writes it to testout.txt using writeUTF(), and then closes the streams.
-2.	It reopens testout.txt with FileInputStream and DataInputStream, reads the stored string using readUTF(), displays it, and then closes the streams.
-3.	It deletes testout.txt.
-4.	After deletion, it tries to read an integer from testout.txt, which causes an error because the file no longer exists.
-5.	The program catches and displays an IOException message if any file-related error occurs, including the attempt to read after deletion.
-
+1. Start the program.
+2. Create a `DataInputStream` object named `di` using `FileInputStream` to read from the file "OutputFile.txt".
+3. Use the `available()` method of `DataInputStream` to check the number of bytes available for reading and print it.
+4. Read a UTF string using `readUTF()` and print the result.
+5. Read an integer using `readInt()` and print the result.
+6. Read a character using `readChar()` and print the result.
+7. Close the `DataInputStream` object.
+8. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a DATA I/O STREAM using Java
-Developed by: 
-RegisterNumber:  
+Program to display number of bytes and read integer and character data from a file using DataInputStream
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 9A_DISPLAY_BYTES_READ_FROM_FILE.JAVA:
+```java
+import java.io.*;
 
+public class Main {
+    public static void main(String[] args) {
+        DataInputStream di = null;
+        try {
+            di = new DataInputStream(new FileInputStream("OutputFile.txt"));
 
+            int availableBytes = di.available();
+            System.out.println("Available number of bytes to read: " + availableBytes);
 
+            String utfString = di.readUTF();
+            System.out.println("Read UTF: " + utfString);
 
+            int intValue = di.readInt();
+            System.out.println("Read int: " + intValue);
 
-
+            char charValue = (char) di.readChar();
+            System.out.println("Read char: " + charValue);
+            
+        } catch (IOException e) {
+            System.out.println("Exception: " + e);
+        } finally {
+            try {
+                if (di != null) {
+                    di.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Exception while closing the stream: " + e);
+            }
+        }
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/dc22903b-1f5e-4ab5-b99d-00c5ffce7b12)
 
 
 ## RESULT:
-Thus the Java Program to store a String Value in a file "testout.txt" using DataOutputStream was executed and verified successfully.
-
+Thus, the Java program that displays the number of bytes and reads integer and character data from the file "OutputFile.txt" using `DataInputStream` was successfully implemented and executed.
