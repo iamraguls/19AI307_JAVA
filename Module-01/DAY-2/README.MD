@@ -1,45 +1,50 @@
-# Ex.No:1(B) VARIABLES AND OPERATOR
+# Ex.No:1(B) TOTAL AND PERCENTAGE CALCULATION
 
 ## AIM:
-To write a Java program to get values of variables 'a' and 'b' and then check if both the conditions 'a < 50' and 'a < b' are true. [Class name is ‘Demo’]
+To write a Java program to calculate total and percentage marks obtained by Robert in three subjects.
 
 ## ALGORITHM :
-1.	Start the program.
-2.	Import the necessary package 'java.util'
-3.	Define a class named 'Demo'
-4.	Implement the main method
-5.	Create a new instance of the 'Scanner' class named 'sc' to read user input
-6.	Read an integer 'a' from the user using the 'nextInt' method of 'sc'
-7.	Read another integer 'b' from the user using the 'nextInt' method of 'sc'
-8.	Check if 'a' is less than 50 or if 'a' is less than 'b'
-a)	If the condition is true, print "true" using the 'print' method of 'System.out'
-b)	If the condition is false, print "false" using the 'print' method of 'System.out'
-9.	End
-
-
-
-
+1. Start the program.
+2. Import the `Scanner` class to read input from the user.
+3. Read three float values representing the marks in three subjects.
+4. Calculate the total by summing the three values.
+5. Calculate the percentage by dividing the total by 3.
+6. Display the total and percentage.
+7. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a variable and operators using Java
-Developed by: 
-RegisterNumber:  
+Program to calculate total and percentage marks using Java
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 1B_TOTAL_AND_PERCENTAGE.JAVA:
+```java
+import java.util.*;
+public class main {
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        float a = sc.nextInt();
+        float b = sc.nextInt();
+        float c = sc.nextInt();
+        
+        float total = a + b + c;
+        
+        double percentage = (total / 3.0);
 
-
-
-
-
-
+        System.out.println("Total marks (out of 300): " + total);
+        System.out.println("Percentage: " + percentage + "%");
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/41909aad-0af3-4497-80fd-9fe5a5ca3721)
 
 
 ## RESULT:
-Thus, the Java program to get values of variables 'a' and 'b' and then check if both the conditions 'a < 50' and 'a < b' are true is created successfully.
+Thus, the Java program to calculate total and percentage marks for three subjects was implemented and executed successfully.
