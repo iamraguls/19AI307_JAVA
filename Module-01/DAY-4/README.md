@@ -1,46 +1,57 @@
-# Ex.No:1(D) USER DEFINED METHOD.
+# Ex.No:1(D) INSTANCE METHOD TO GET AND PRINT 2 VALUES
 
 ## AIM:
-To create a Java program print area of rectangle by defining instance method and local variable value as 10,20 .[Class Name is ‘Area’ function name is ‘calculateArea()’ and return type of function is ’void’
+To write a Java method to get and print two values entered by the user by defining instance methods in the class 'Test'. The method names are `getData()` and `putData()`.
 
 ## ALGORITHM :
-1.	Start the program.
-2.	Define a class named 'Area'
-3.	Declare a public method named 'calculateArea' with no parameters
-4.	Inside the 'calculateArea' method:
-a)	Declare a Double variable 'length' and assign it the value 10.0
-b)	Declare a Double variable 'width' and assign it the value 20.0
-c)	Calculate the area by multiplying 'length' and 'width' and store the result in a Double variable 'area'
-d)	Print the calculated area using the System.out.println statement
-5.	Define the 'main' method as static
-6.	Inside the 'main' method:
-a)	Create an instance of the 'Area' class called 'rectangle'
-b)	Call the 'calculateArea' method on the 'rectangle' object
-
-
-
+1. Start the program.
+2. Define a class named 'Test' with two instance variables `num1` and `num2`.
+3. Define the `getData()` method to read input values from the user.
+4. Define the `putData()` method to print the values of `num1` and `num2`.
+5. In the `main` method, create an object of the 'Test' class.
+6. Call the `getData()` and `putData()` methods using the object.
+7. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a User Defined Method using Java
-Developed by: 
-RegisterNumber:  
+Program to get and print two values entered by the user using instance methods in Java
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 1D_INSTANCE_METHOD_GET_PUT_DATA.JAVA:
+```java
+import java.util.*;
 
+public class Test {
+    
+    int num1, num2;
 
+    public void getData() {
+        Scanner sc = new Scanner(System.in);
+        num1 = sc.nextInt();
+        num2 = sc.nextInt();
+    }
 
+    public void putData() {
+        System.out.println("Number1 is: " + num1);
+        System.out.println("Number2 is: " + num2);
+    }
 
+    public static void main(String[] args) {
+        Test obj1 = new Test();
 
-
+        obj1.getData();
+        obj1.putData();
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/21256776-5e34-47a1-951c-9113b07f95b4)
 
 
 ## RESULT:
-Thus, the Java program to print area of rectangle by defining instance method and local variable value as 10,20 was created successfully.
-
+Thus, the Java program to get and print two values entered by the user using instance methods was implemented and executed successfully.
