@@ -1,53 +1,69 @@
-# Ex.No:12(C)             JAVA STACK & VECTOR
- ## AIM :
+# Ex.No:12(C) VECTOR IMPLEMENTATION IN JAVA COLLECTION
 
-To Write a java program to create vector and read the elements for two vector in java collection.(Use equals method )
+## AIM:
+To write a Java program to read and print the elements using `Vector` in Java Collection Framework.
+
 ## ALGORITHM :
-
-1.	Start the Program
-2.	In `main`:
--	a) Create a `Scanner` object to read input.
--	b) Read an integer `n1` (the size of the first vector).
--	c) Initialize `Vector<String> vector1`.
--	d) Use a `for` loop to read `n1` strings and add each to `vector1`.
-3.	Repeat similar steps for a second vector:
-a)	Read an integer `n2` (size of the second vector).
-b)	Initialize `Vector<String> vector2`.
-c)	Use a `for` loop to read `n2` strings and add each to `vector2`.
-4.	Use `equals()` to compare `vector1` and `vector2` and print whether they are equal.
-5.	End.
-
-
+1. Start the program.
+2. Import the required classes: `Scanner` and `Vector`.
+3. Create a `Vector` object to store elements.
+4. Read the initial size of the vector.
+5. Loop to read elements (either string or integer) and add them using `add()` method.
+6. Display the current vector.
+7. Read the number of new elements to be added.
+8. Loop again to read and add the new elements.
+9. Display the updated vector.
+10. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a JAVA STACK & VECTOR  using Java
-Developed by: 
-RegisterNumber:  
+Program to implement Vector in Java Collection
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 11E_VECTOR_IMPLEMENTATION.JAVA:
+```java
+import java.util.Scanner;
+import java.util.Vector;
 
-
-
-
-
-
+public class VectorExample1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Vector<Object> vec = new Vector<>();
+        int initialSize = sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i < initialSize * 2; i++) {
+            String input = sc.nextLine();
+            try {
+                int num = Integer.parseInt(input);
+                vec.add(num);
+            } catch (NumberFormatException e) {
+                vec.add(input);
+            }
+        }
+        System.out.println("The vector is: " + vec);
+        int addSize = sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i < addSize; i++) {
+            String input = sc.nextLine();
+            try {
+                int num = Integer.parseInt(input);
+                vec.add(num);
+            } catch (NumberFormatException e) {
+                vec.add(input);
+            }
+        }
+        System.out.println("The new Vector is: " + vec);
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/7c11696e-d544-482d-89ab-cb08072a07f7)
 
 
 ## RESULT:
-
-Thus the java program to create vector and read the elements for two vector in java collection.(Use equals method ) was executed successfully.
-
-
-
-
-
-
-
-
+Thus, the Java program to read and print elements using `Vector` in the Collection Framework was successfully implemented and executed.

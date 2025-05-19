@@ -1,48 +1,50 @@
-# Ex.No:12(D) JAVA QUEUE
-## AIM:
-To Write a java program to create vector and read the elements for two vector in java collection.(Use equals method )
+# Ex.No:12(D) PRIORITY QUEUE IMPLEMENTATION
 
+## AIM:
+To write a Java program to display the added elements from the `PriorityQueue`.
 
 ## ALGORITHM :
-1.	Start the Program
-2.	Import `PriorityQueue` and `Scanner`
-3.	Define class `Main` with `main` method:
--	a) Initialize `Scanner` to read input
--	b) Create a `PriorityQueue` of integers
-4.	Read integer `n` from user input for the number of elements
-5.	Use a loop to:
--	a) Read integers and add them to the `PriorityQueue`
-6.	Check if the `PriorityQueue` is not empty:
--	a) Remove and display the highest-priority element using `poll()`
-7.	Display the remaining elements in the `PriorityQueue`
-8.	End.
-
-
-
-
+1. Start the program.
+2. Import the required classes.
+3. Create a `PriorityQueue` of integers.
+4. Read the size of the queue from the user.
+5. Use a loop to read integer elements and add them to the priority queue.
+6. Display the contents of the queue.
+7. End.
 
 ## PROGRAM:
- ```
+```
 /*
-Program to implement a JAVA QUEUE using Java
-Developed by: 
-RegisterNumber:  
+Program to implement PriorityQueue in Java
+Developed by: Ragul S
+RegisterNumber: 212222060184
 */
 ```
 
-## Sourcecode.java:
+## 12A_PRIORITY_QUEUE.JAVA:
+```java
+import java.util.*;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
+        int size = sc.nextInt();
 
+        for (int i = 0; i < size; i++) {
+            pq.add(sc.nextInt());
+        }
 
-
-
+        System.out.println("Display the element of Queue:");
+        System.out.println(pq);
+    }
+}
+```
 
 ## OUTPUT:
-
+![image](https://github.com/user-attachments/assets/b10f6258-ead0-4a2c-8573-0910b5cab4c6)
 
 
 ## RESULT:
-Thus the java program to create vector and read the elements for two vector in java collection.(Use equals method )was executed successfully.
-
-
+Thus, the Java program to display the added elements from the `PriorityQueue` was successfully implemented and executed.
